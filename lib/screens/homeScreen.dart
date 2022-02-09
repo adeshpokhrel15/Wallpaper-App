@@ -1,5 +1,10 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:walpapers/providers/providers.dart';
 import 'package:walpapers/widgets/widgets.dart';
+import 'package:get/get.dart';
 
 class homeScreen extends StatefulWidget {
   @override
@@ -37,6 +42,16 @@ class _homeScreenState extends State<homeScreen> {
               ),
             ),
             SizedBox(height: 20.0),
+            Consumer(builder: (context, ref, child) {
+              final wallpaperData = ref.watch(wallpaperProvider);
+              return wallpaperData.when(
+                data: (data) {
+                  return Image.network(data[0].url!);
+                },
+                loading: () => Center(child: CircularProgressIndicator()),
+                error: (err, stack) => Text('$err'),
+              );
+            })
           ],
         ),
       ),
