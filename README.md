@@ -14,5 +14,10 @@ A few resources to get you started if this is your first Flutter project: <br>
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-# Wallpaper-App
+# Wallpaper-App <br>
+
+Api used for this project is <a href='www.pexels.com/api'> Wallpaper Api</a> <br>
+
+ <a href='https://www.pexels.com/api/documentation/'> Project documentation </a>
+
 
