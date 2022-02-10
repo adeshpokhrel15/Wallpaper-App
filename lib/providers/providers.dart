@@ -24,19 +24,19 @@ class WallpaperProvider {
           'https://api.pexels.com/v1/search?query=people',
           queryParameters: {
             'query': 'coding',
-            'per_page': '15',
             'page': '1',
           },
           options: Options(headers: {
             'Authorization':
                 '563492ad6f91700001000001637c9af347cd415e87f809df5defc023'
           }));
-      List<Wallpaper> wallpapers = (response.data['photos'] as List).map((e) {
+      List<Wallpaper> wallpapers =
+          (response.data['photos']['src']['original'] as List).map((e) {
         return Wallpaper.fromJson(e);
       }).toList();
 
-      print(response.data);
-      return [];
+      // print(response.data);
+      return wallpapers;
     } on DioError catch (e) {
       throw e;
     }
