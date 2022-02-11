@@ -24,8 +24,6 @@ class Wallpaper {
     return Wallpaper(
       id: json['id'] ?? '',
       width: json['width'] ?? '',
-      height: json['height'] ?? '',
-      url: json['url'] ?? '',
       photographer: json['photographer'] ?? '',
       photographerId: json['photographer_id'] ?? '',
       alt: json['alt'] ?? '',
