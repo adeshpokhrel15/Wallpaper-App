@@ -46,7 +46,7 @@ class _homeScreenState extends State<homeScreen> {
                 data: (data) {
                   print(data);
                   return Image.network(
-                    data[5].original!,
+                    data[0].url!,
                     scale: 1.0,
                   );
                 },

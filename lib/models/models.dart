@@ -5,7 +5,6 @@ class Wallpaper {
   late String? url;
   late String? photographer;
   late int? photographerId;
-  late String? alt;
 
   late String? original;
 
@@ -16,18 +15,16 @@ class Wallpaper {
     this.url,
     this.photographer,
     this.photographerId,
-    this.alt,
-    this.original,
   });
 
   factory Wallpaper.fromJson(Map<String, dynamic> json) {
     return Wallpaper(
       id: json['id'] ?? '',
       width: json['width'] ?? '',
+      height: json['height'] ?? '',
+      url: json['src']['small'] ?? '',
       photographer: json['photographer'] ?? '',
       photographerId: json['photographer_id'] ?? '',
-      alt: json['alt'] ?? '',
-      original: json['original'] ?? '',
     );
   }
 }

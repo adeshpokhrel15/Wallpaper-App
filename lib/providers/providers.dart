@@ -30,8 +30,7 @@ class WallpaperProvider {
             'Authorization':
                 '563492ad6f91700001000001637c9af347cd415e87f809df5defc023'
           }));
-      List<Wallpaper> wallpapers =
-          (response.data['photos']['src']['original'] as List).map((e) {
+      List<Wallpaper> wallpapers = (response.data['photos'] as List).map((e) {
         return Wallpaper.fromJson(e);
       }).toList();
 
